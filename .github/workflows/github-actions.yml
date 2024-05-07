@@ -16,7 +16,7 @@ jobs:
           node-version: '18.16.1'  # Asegúrate de usar una versión compatible con tu proyecto
       - name: Install dependencies
         run: npm ci
-      - name: Run getinfo script
+      - name: Run getinfo scriptt
         run: npm run getinfo
       - name: Add and commit changes
         run: |
