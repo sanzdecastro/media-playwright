@@ -18,7 +18,7 @@ jobs:
         run: npm ci
       - name: Run getinfo script
         run: npm run getinfo
-         - name: Add and commit changes
+      - name: Add and commit changes
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
