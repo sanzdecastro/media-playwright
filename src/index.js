@@ -44,8 +44,8 @@ const medias = [
     
     console.log(titles)
       //writing async data
-        // let newsJSON = await JSON.stringify(titles, null, 2);
-        // await fs.promises.writeFile("news.json", newsJSON);
+        let newsJSON = await JSON.stringify(titles, null, 2);
+        await fs.promises.writeFile("news.json", newsJSON);
         console.log('Fin de getinfo.');
 process.exit();
 })();
