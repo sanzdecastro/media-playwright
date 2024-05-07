@@ -22,7 +22,7 @@ jobs:
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-          git add.
+          git add .
           git commit -m "Generate file via GitHub Action"
       - name: Push changes
         uses: ad-m/github-push-action@master
