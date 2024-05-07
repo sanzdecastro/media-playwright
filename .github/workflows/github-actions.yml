@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main  # Cambia esto por el nombre de tu rama principal si es diferente
-      
+
 permissions:
       contents: write
       pull-requests: write
@@ -31,5 +31,4 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.headlines12345 }}
           branch: main
