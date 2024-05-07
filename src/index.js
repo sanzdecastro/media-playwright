@@ -18,14 +18,6 @@ const medias = [
         }
     },
     {
-        newspaper: 'ABC',
-        url: 'https://www.abc.es/',
-        checkTitles: async ({ page }) => {
-            const title = await page.textContent("article:first-of-type h2 a")
-            return title
-        }
-    },
-    {
         newspaper: 'Público',
         url: 'https://www.publico.es/',
         checkTitles: async ({ page }) => {
@@ -94,6 +86,14 @@ const medias = [
         url: 'https://www.larazon.es/',
         checkTitles: async ({ page }) => {
             const title = await page.textContent(".article__header h2 a")
+            return title
+        }
+    },
+    {
+        newspaper: 'ABC',
+        url: 'https://www.abc.es/',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent("article:first-of-type h2 a")
             return title
         }
     }
