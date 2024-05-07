@@ -13,7 +13,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Asegúrate de usar una versión compatible con tu proyecto
+          node-version: '18.16.1'  # Asegúrate de usar una versión compatible con tu proyecto
       - name: Install dependencies
         run: npm ci
       - name: Run getinfo script
