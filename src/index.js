@@ -16,6 +16,86 @@ const medias = [
             const title = await page.textContent("header:first-of-type h2 a")
             return title
         }
+    },
+    {
+        newspaper: 'ABC',
+        url: 'https://www.abc.es/',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent("article:first-of-type h2 a")
+            return title
+        }
+    },
+    {
+        newspaper: 'Público',
+        url: 'https://www.publico.es/',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent(".title a")
+            return title
+        }
+    },
+    {
+        newspaper: 'El Diario',
+        url: 'https://www.eldiario.es/',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent(".home-content-container h2 a")
+            return title
+        }
+    },
+    {
+        newspaper: 'Infolibre',
+        url: 'https://www.infolibre.es/',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent("h2.bold a")
+            return title
+        }
+    },
+    {
+        newspaper: 'La Vanguardia',
+        url: 'https://www.lavanguardia.com',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent("h2 a")
+            return title
+        }
+    },
+    {
+        newspaper: 'El Mundo',
+        url: 'https://elmundo.es',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent("a h2")
+            return title
+        }
+    },
+    {
+        newspaper: 'El Español',
+        url: 'https://elespanol.com',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent("h2.art__title a")
+            return title
+        }
+    },
+    {
+        newspaper: 'OK Diario',
+        url: 'https://okdiario.com',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent("h2 a")
+            return title
+        }
+    },
+    {
+        newspaper: '20 minutos',
+        url: 'https://20minutos.es/',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent("h1 a")
+            return title
+        }
+    },
+    {
+        newspaper: 'La Razón',
+        url: 'https://www.larazon.es/',
+        checkTitles: async ({ page }) => {
+            const title = await page.textContent(".article__header h2 a")
+            return title
+        }
     }
 ];
 
@@ -43,10 +123,13 @@ const medias = [
     }
     
     console.log(titles)
-      //writing async data
-        let newsJSON = await JSON.stringify(titles, null, 2);
-        await fs.promises.writeFile("./news.json", newsJSON);
-        console.log('Fin de getinfo.');
-process.exit();
+
+    // crear archivo json con los resultados
+    let newsJSON = await JSON.stringify(titles, null, 2);
+    await fs.promises.writeFile("./news.json", newsJSON);
+
+    // cerrar proceso
+    console.log('Fin de getinfo.');
+    process.exit();
 })();
 
