@@ -50,4 +50,3 @@ const medias = [
 process.exit();
 })();
 
-run().catch(console.error);
