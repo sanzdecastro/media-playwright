@@ -27,5 +27,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.HEADLINES_TOKEN }}
+          github_token: ${{ secrets.1234 }}
           branch: main
