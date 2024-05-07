@@ -1,10 +1,11 @@
 name: Run getinfo Script
 
 on:
-  push:
-    branches:
-      - main  # Cambia esto por el nombre de tu rama principal si es diferente
-
+  # push:
+  #   branches:
+  #     - main  # Cambia esto por el nombre de tu rama principal si es diferente
+  schedule:
+    - cron: '*/30 * * * *'  # Ejecuta el flujo de trabajo cada 30 minutos
 permissions:
       contents: write
       pull-requests: write
