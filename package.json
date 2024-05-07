@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "getinfo": "node src/index.js"
+    "getinfo": "node src/index.js && exit"
   },
   "keywords": [],
   "author": "",
