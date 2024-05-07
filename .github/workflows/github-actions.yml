@@ -17,4 +17,4 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run getinfo script
-         run: node -e "require('./src/index.js').run();"
+        run: npm run getinfo
