@@ -1,50 +1,62 @@
 [
   {
     "media": "El Confidencial",
-    "title": "El TSJM abre una investigación contra los fiscales por la filtración sobre el novio de Ayuso"
+    "title": "No se ha podido conseguir el titular",
+    "mediaUrl": "https://www.elconfidencial.com/"
   },
   {
     "media": "El País",
-    "title": "Israel entra en Rafah y toma el control fronterizo de Gaza con Egipto"
-  },
-  {
-    "media": "ABC",
-    "title": "El Supremo tumba el nombramiento de Dolores Delgado como fiscal de Memoria Democrática"
+    "title": "Trabajo firma la reforma del subsidio de paro con los sindicatos y sin el apoyo de la patronal",
+    "mediaUrl": "https://elpais.com/"
   },
   {
     "media": "Público",
-    "title": "El Gobierno muestra \"orgullo\" por las manifestaciones universitarias de apoyo a Palestina pero aplaza su reconocimiento"
+    "title": "\"Por tu plaza, cinco kilos\": así se compraban los empleos en la Deputación de Ourense de Feijóo y los Baltar",
+    "mediaUrl": "https://www.publico.es/"
   },
   {
     "media": "El Diario",
-    "title": "Gaza queda completamente aislada tras la toma del paso de Rafah por Israel"
+    "title": "Trabajo y los sindicatos llegan a un acuerdo para la reforma del subsidio por desempleo",
+    "mediaUrl": "https://www.eldiario.es/"
   },
   {
     "media": "Infolibre",
-    "title": "Netanyahu no quiere testigos: cierra Al Jazeera mientras vacía Rafah para borrar Gaza del mapa"
+    "title": "La universidad recupera el espíritu crítico del 15M y toma partido por Palestina",
+    "mediaUrl": "https://www.infolibre.es/"
   },
   {
     "media": "La Vanguardia",
-    "title": "Catalunya levanta la emergencia, reduce las restricciones de agua y permite rellenar piscinas"
+    "title": "Trabajo y sindicatos pactan la reforma del subsidio del paro sin la patronal",
+    "mediaUrl": "https://www.lavanguardia.com"
   },
   {
     "media": "El Mundo",
-    "title": "El Supremo anula la designación de Delgado como fiscal de Sala de Memoria Democrática y da otro varapalo a García Ortiz"
+    "title": "El fiscal general recusa a los magistrados del Supremo que tienen en sus manos su continuidad",
+    "mediaUrl": "https://elmundo.es"
   },
   {
     "media": "El Español",
-    "title": "El Supremo tumba el nombramiento de Dolores Delgado como fiscal de Memoria Democrática"
+    "title": "Bustinduy y Rego abren otra crisis con Israel por su \"falsa acusación de genocidio\"",
+    "mediaUrl": "https://elespanol.com"
   },
   {
     "media": "OK Diario",
-    "title": "Castilla y León destina los 20 millones que quitó a los sindicatos a cheques-bebé para 7.500 familias"
+    "title": "La ministra Sira Rego llama a exterminar a los judíos de Israel: \"¡Desde el río hasta el mar!\"",
+    "mediaUrl": "https://okdiario.com"
   },
   {
     "media": "20 minutos",
-    "title": "El Supremo anula el nombramiento de Dolores Delgado como fiscal de Memoria Democrática"
+    "title": "El Senado pide al Gobierno que destituya al fiscal general por el \"incumplimiento\" de sus funciones",
+    "mediaUrl": "https://20minutos.es/"
   },
   {
     "media": "La Razón",
-    "title": "El TS también anula el nombramiento de Dolores Delgado como fiscal de Memoria Democrática"
+    "title": "El fiscal general recusa a todos los magistrados que deben decidir sobre su nombramiento",
+    "mediaUrl": "https://www.larazon.es/"
+  },
+  {
+    "media": "ABC",
+    "title": "El fiscal general recusa a cuatro de los cinco magistrados que tienen que decidir sobre su propia continuidad",
+    "mediaUrl": "https://www.abc.es/"
   }
 ]

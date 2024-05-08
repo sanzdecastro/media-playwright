@@ -6,6 +6,7 @@ on:
   #     - main  # Cambia esto por el nombre de tu rama principal si es diferente
   schedule:
     - cron: '*/30 * * * *'  # Ejecuta el flujo de trabajo cada 30 minutos
+    # 0 6,12,15,18,21,0 * * *
 permissions:
       contents: write
       pull-requests: write
@@ -14,14 +15,14 @@ jobs:
   run-getinfo:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '18.16.1'  # Asegúrate de usar una versión compatible con tu proyecto
-      - name: Install dependencies
-        run: npm ci
-      - name: Run getinfo scriptt
+      # - uses: actions/checkout@v2
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: '18.16.1'  # Asegúrate de usar una versión compatible con tu proyecto
+      # - name: Install dependencies
+      #   run: npm ci
+      # - name: Run getinfo scriptt
         run: npm run getinfo
       - name: Add and commit changes
         run: |

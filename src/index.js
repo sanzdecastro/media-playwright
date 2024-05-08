@@ -5,15 +5,23 @@ const medias = [
         newspaper: 'El Confidencial',
         url: 'https://www.elconfidencial.com/',
         checkTitles: async ({ page }) => {
-            const title = await page.textContent("article:first-of-type div a")
-            return title
+            try {
+                const title = await page.textContent(".main-container h2 a")
+                return title
+            }
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
+            
         }
     },
     {
         newspaper: 'El País',
         url: 'https://elpais.com/',
         checkTitles: async ({ page }) => {
-            const title = await page.textContent("header:first-of-type h2 a")
+            const title = await page.textContent("h2 a")
             return title
         }
     },
@@ -88,15 +96,22 @@ const medias = [
             const title = await page.textContent(".article__header h2 a")
             return title
         }
+    },
+    {
+        newspaper: 'ABC',
+        url: 'https://www.abc.es/',
+        checkTitles: async ({ page }) => {
+            try {
+                const title = await page.textContent("article:first-of-type h2 a")
+                return title
+            }
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
+        }
     }
-    // {
-    //     newspaper: 'ABC',
-    //     url: 'https://www.abc.es/',
-    //     checkTitles: async ({ page }) => {
-    //         const title = await page.textContent("article:first-of-type h2 a")
-    //         return title
-    //     }
-    // }
 ];
 
 (async () => {
@@ -116,6 +131,7 @@ const medias = [
         const newspaperObject = {
             media: newspaper,
             title: titleResults.trim(),
+            mediaUrl: url
         }
         titles.push(newspaperObject);
 
