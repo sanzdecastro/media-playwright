@@ -1,9 +1,9 @@
 name: Run getinfo Script
 
 on:
-  push:
-    branches:
-      - main  # Cambia esto por el nombre de tu rama principal si es diferente
+  # push:
+  #   branches:
+  #     - main  # Cambia esto por el nombre de tu rama principal si es diferente
   schedule:
     - cron: '0 6,12,15,18,21,0 * * *'  # Ejecuta el flujo de trabajo cada 30 minutos
     # */30 * * * *
