@@ -182,7 +182,7 @@ const medias = [
         url: 'https://www.abc.es/',
         checkTitles: async ({ page }) => {
             try {
-                const title = await page.textContent(".voc-article-container h2 a")
+                const title = await page.textContent("h2.voc-title a")
                 return title
             }
             catch(error) {
