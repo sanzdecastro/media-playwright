@@ -19,7 +19,7 @@ const medias = [
     },
     {
         newspaper: 'El País',
-        url: 'https://elpais.com/?ed=es',
+        url: 'https://elpais.com/espana',
         checkTitles: async ({ page }) => {
             try {
                 const title = await page.textContent("h2 a")
