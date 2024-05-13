@@ -6,7 +6,7 @@ const medias = [
         url: 'https://www.elconfidencial.com/',
         checkTitles: async ({ page }) => {
             try {
-                const title = await page.textContent("h2 a")
+                const title = await page.textContent("article h2")
                 return title
             }
             catch(error) {
