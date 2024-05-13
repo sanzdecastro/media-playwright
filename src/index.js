@@ -136,7 +136,7 @@ const medias = [
 
         const page = await browser.newPage()
 
-        try {
+        // try {
             await page.goto(url)
 
             const titleResults = await checkTitles({ page })
@@ -146,10 +146,10 @@ const medias = [
                 mediaUrl: url
             }
             titles.push(newspaperObject);
-        } catch (error) {
-            const title = "No se ha podido conseguir el titular"
-            return title
-        }
+        // } catch (error) {
+        //     const title = "No se ha podido conseguir el titular"
+        //     return title
+        // }
 
         await page.close()
     }
