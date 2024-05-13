@@ -5,10 +5,15 @@ const medias = [
         newspaper: 'El Confidencial',
         url: 'https://www.elconfidencial.com/',
         checkTitles: async ({ page }) => {
-           
-                const title = await page.textContent(".article-module h2 a")
+            try {
+                const title = await page.textContent(".m-principal__title")
                 return title
-            
+            }
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
             
         }
     },
@@ -16,110 +21,175 @@ const medias = [
         newspaper: 'El País',
         url: 'https://elpais.com/?ed=es',
         checkTitles: async ({ page }) => {
-            
+            try {
                 const title = await page.textContent("h2 a")
                 return title
+            }
             
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: 'Público',
         url: 'https://www.publico.es/',
         checkTitles: async ({ page }) => {
-           
+            try {
                 const title = await page.textContent(".title a")
                 return title
+            }
             
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: 'El Diario',
         url: 'https://www.eldiario.es/',
         checkTitles: async ({ page }) => {
-            
+            try {
                 const title = await page.textContent(".home-content-container h2 a")
                 return title
-          
+            }
+            
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: 'Infolibre',
         url: 'https://www.infolibre.es/',
         checkTitles: async ({ page }) => {
+            try {
                 const title = await page.textContent("h2.bold a")
                 return title
+            }
            
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: 'La Vanguardia',
         url: 'https://www.lavanguardia.com',
         checkTitles: async ({ page }) => {
-          
+            try {
                 const title = await page.textContent("h2 a")
                 return title
+            }
             
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: 'El Mundo',
         url: 'https://elmundo.es',
         checkTitles: async ({ page }) => {
-           
+            try {
                 const title = await page.textContent("a h2")
                 return title
+            }
             
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: 'El Español',
         url: 'https://elespanol.com',
         checkTitles: async ({ page }) => {
+            try {
                 const title = await page.textContent("h2.art__title a")
                 return title
+            }
             
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: 'OK Diario',
         url: 'https://okdiario.com',
         checkTitles: async ({ page }) => {
-            
+            try {
                 const title = await page.textContent("h2 a")
                 return title
+            }
             
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: '20 minutos',
         url: 'https://20minutos.es/',
         checkTitles: async ({ page }) => {
-            
+            try {
                 const title = await page.textContent("h1 a")
                 return title
+            }
             
-            
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: 'La Razón',
         url: 'https://www.larazon.es/',
         checkTitles: async ({ page }) => {
-            
+            try {
                 const title = await page.textContent(".article__header h2 a")
                 return title
+            }
             
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     },
     {
         newspaper: 'ABC',
         url: 'https://www.abc.es/',
         checkTitles: async ({ page }) => {
-            
-                const title = await page.textContent(".voc-article h2 a")
+            try {
+                const title = await page.textContent(".voc-article-container h2 a")
                 return title
-            
-            
+            }
+            catch(error) {
+                console.log(error);
+                const title = "No se ha podido conseguir el titular"
+                return title
+            }
         }
     }
 ];
@@ -136,20 +206,15 @@ const medias = [
 
         const page = await browser.newPage()
 
-        // try {
-            await page.goto(url)
+        await page.goto(url)
 
-            const titleResults = await checkTitles({ page })
-            const newspaperObject = {
-                media: newspaper,
-                title: titleResults.trim(),
-                mediaUrl: url
-            }
-            titles.push(newspaperObject);
-        // } catch (error) {
-        //     const title = "No se ha podido conseguir el titular"
-        //     return title
-        // }
+        const titleResults = await checkTitles({ page })
+        const newspaperObject = {
+            media: newspaper,
+            title: titleResults.trim(),
+            mediaUrl: url
+        }
+        titles.push(newspaperObject);
 
         await page.close()
     }
