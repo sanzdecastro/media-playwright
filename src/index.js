@@ -25,7 +25,7 @@ const medias = [
         url: 'https://elpais.com/espana',
         checkTitles: async ({ page }) => {
             try {
-                const title = await page.textContent("h2 a")
+                const title = await page.textContent("article h2 a")
                 return title
             }
             
@@ -73,7 +73,7 @@ const medias = [
         url: 'https://www.infolibre.es/',
         checkTitles: async ({ page }) => {
             try {
-                const title = await page.textContent("h2 a")
+                const title = await page.textContent("h2.bold a")
                 return title
             }
            
