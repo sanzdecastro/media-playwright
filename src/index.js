@@ -73,7 +73,7 @@ const medias = [
         url: 'https://www.infolibre.es/',
         checkTitles: async ({ page }) => {
             try {
-                const title = await page.textContent("h2.bold a")
+                const title = await page.textContent("h2 a")
                 return title
             }
            
@@ -105,7 +105,7 @@ const medias = [
         url: 'https://elmundo.es',
         checkTitles: async ({ page }) => {
             try {
-                const title = await page.textContent("a h2")
+                const title = await page.textContent("article a h2")
                 return title
             }
             
@@ -185,7 +185,7 @@ const medias = [
         url: 'https://www.abc.es/',
         checkTitles: async ({ page }) => {
             try {
-                const title = await page.textContent(".voc-article-container h2 a")
+                const title = await page.textContent(".voc-container h2 a")
                 return title
             }
             catch(error) {
