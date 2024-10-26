@@ -1,5 +1,8 @@
 import { chromium } from "playwright";
 import * as fs from 'fs';
+// Configura el dispositivo móvil que deseas emular
+const iPhone12 = devices['iPhone 12'];
+
 const medias = [
     {
         newspaper: 'El Confidencial',
