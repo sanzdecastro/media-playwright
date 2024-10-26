@@ -203,7 +203,7 @@ const medias = [
     )
 
     const context = await browser.newContext({
-        ...iPhone12 // Aplica la configuración del dispositivo móvil (iPhone 12 en este caso)
+        ...iPhone12
     });
 
     const titles = []
