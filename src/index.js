@@ -201,13 +201,17 @@ const medias = [
     const browser = await chromium.launch(
         { headless: true }
     )
-    
+
+    const context = await browser.newContext({
+        ...iPhone12 // Aplica la configuración del dispositivo móvil (iPhone 12 en este caso)
+    });
+
     const titles = []
     
     for (const media of medias) {
         const { checkTitles, newspaper, url } = media
 
-        const page = await browser.newPage()
+        const page = await context.newPage()
 
         await page.goto(url)
 
